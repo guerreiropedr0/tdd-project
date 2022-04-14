@@ -17,5 +17,11 @@ describe Solver do
 
       expect(number).to eq 120
     end
+
+    it 'should return 1 when calling factorial method with 0 as argument' do
+      number = @solver.factorial(0)
+
+      expect(number).to eq 1
+    end
   end
 end
