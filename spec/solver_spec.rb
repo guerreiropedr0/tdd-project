@@ -1,17 +1,19 @@
 require_relative '../solver'
 
 describe Solver do
-  context 'When testing the Solver class' do
-    before :each do
-      @solver = Solver.new
-    end
+  before :each do
+    @solver = Solver.new
+  end
 
+  context 'When testing the Solver class' do
     it 'should have an object with the instance of Solver' do
       solver_class = @solver.class
 
       expect(solver_class).to be Solver
     end
+  end
 
+  context 'When testing the factorial method in Solver class' do
     it 'should return the factorial when calling factorial method' do
       number = @solver.factorial(5)
 
@@ -29,28 +31,29 @@ describe Solver do
     end
 
     it 'should return a reversed string when calling reverse method with valid string input' do
-      string_reversed = @solver.reverse("hello")
+      string_reversed = @solver.reverse('hello')
 
-      expect(string_reversed).to eq "olleh"
+      expect(string_reversed).to eq 'olleh'
     end
+  end
 
-    it 'should return "fizz" if fizzbuzz method is called with a number divisible by 3'do
+  context 'When testing the fizzbuzz method in Solver class' do
+    it 'should return "fizz" if fizzbuzz method is called with a number divisible by 3' do
       returned_string = @solver.fizzbuzz(3)
 
       expect(returned_string).to eq 'fizz'
     end
 
-    it 'should return "fizz" if fizzbuzz method is called with a number divisible by 3'do
+    it 'should return "fizz" if fizzbuzz method is called with a number divisible by 3' do
       returned_string = @solver.fizzbuzz(5)
 
       expect(returned_string).to eq 'buzz'
     end
 
-    it 'should return "fizzbuzz" if fizzbuzz method is called with a number divisible by 3 & 5'do
+    it 'should return "fizzbuzz" if fizzbuzz method is called with a number divisible by 3 & 5' do
       returned_string = @solver.fizzbuzz(15)
 
       expect(returned_string).to eq 'fizzbuzz'
     end
-    
   end
 end
