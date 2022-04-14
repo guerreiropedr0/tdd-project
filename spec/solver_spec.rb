@@ -56,7 +56,7 @@ describe Solver do
       expect(returned_string).to eq 'fizzbuzz'
     end
 
-    it 'should return the integer passed as a string if fizzbuzz method is called an doesnt match any divisible parametes' do
+    it 'should return integer passed as a string if fizzbuzz method is called an doesnt match any condition' do
       returned_string = @solver.fizzbuzz(7)
 
       expect(returned_string).to eq '7'

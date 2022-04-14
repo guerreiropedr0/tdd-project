@@ -16,5 +16,7 @@ class Solver
     return 'fizzbuzz' if (integer % 3).zero? && (integer % 5).zero?
     return 'fizz' if (integer % 3).zero?
     return 'buzz' if (integer % 5).zero?
+
+    integer.to_s
   end
 end
