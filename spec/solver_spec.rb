@@ -40,6 +40,11 @@ describe Solver do
       expect(returned_string).to eq 'fizz'
     end
 
+    it 'should return "fizz" if fizzbuzz method is called with a number divisible by 3'do
+      returned_string = @solver.fizzbuzz(5)
+
+      expect(returned_string).to eq 'buzz'
+    end
     
   end
 end
