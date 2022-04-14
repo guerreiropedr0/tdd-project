@@ -45,6 +45,12 @@ describe Solver do
 
       expect(returned_string).to eq 'buzz'
     end
+
+    it 'should return "fizzbuzz" if fizzbuzz method is called with a number divisible by 3 & 5'do
+      returned_string = @solver.fizzbuzz(15)
+
+      expect(returned_string).to eq 'fizzbuzz'
+    end
     
   end
 end
