@@ -27,5 +27,11 @@ describe Solver do
     it 'should raise an exception when calling factorial method with negative number as argument' do
       expect { @solver.factorial(-50) }.to raise_error('Should be either 0 or positive integer')
     end
+
+    it 'should return a reversed string when calling reverse method with valid string input' do
+      string_reversed = @solver.reverse("hello")
+
+      expect(string_reversed).to eq "olleh"
+    end
   end
 end
