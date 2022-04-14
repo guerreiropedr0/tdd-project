@@ -25,9 +25,7 @@ describe Solver do
     end
 
     it 'should raise an exception when calling factorial method with negative number as argument' do
-      number = @solver.factorial(-50)
-
-      expect(number).to raise 'Should be either 0 or positive integer'
+      expect { @solver.factorial(-50) }.to raise_error('Should be either 0 or positive integer')
     end
   end
 end
