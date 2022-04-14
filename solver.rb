@@ -7,4 +7,8 @@ class Solver
     integer.times { |num| factorial_number *= num + 1 }
     factorial_number
   end
+
+  def reverse(string)
+    string.reverse
+  end
 end
